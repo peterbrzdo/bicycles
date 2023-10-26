@@ -1,0 +1,52 @@
+{
+  "name": "bicycles",
+  "version": "1.0.0",
+  "description": "A simple CAP project.",
+  "repository": "<Add your repository here>",
+  "license": "UNLICENSED",
+  "private": true,
+  "dependencies": {
+    "@sap/cds": "^7",
+    "@sap/cds-hana": "^2",
+    "@sap/xssec": "^3",
+    "express": "^4",
+    "passport": "^0"
+  },
+  "scripts": {
+    "start": "cds watch --profile hybrid --open bicycles/index.html?sap-ui-xx-viewCache=false --livereload true",
+    "watch-bicycles_fiori": "cds watch --open bicyclesfiori/index.html?sap-ui-xx-viewCache=false --livereload false",
+    "watch-bicycles": "cds watch --open bicycles/index.html?sap-ui-xx-viewCache=false --livereload false"
+    
+  },
+  "cds": {
+    "build": {
+      "tasks": [
+        {
+          "for": "hana",
+          "dest": "../db"
+        },
+        {
+          "for": "node-cf"
+        }
+      ]
+    },
+    "requires": {
+      "db": {
+        "kind": "hana-cloud"
+      },
+      "auth": "dummy"
+    }
+  },
+  "workspaces": [
+    "app/*"
+  ],
+  "devDependencies": {
+    "@sap/ux-specification": "^1.108.16",
+    "cds-plugin-ui5": "^0.2.1"
+  },
+  "sapux": [
+    "app/bicycles_fiori",
+    "app/bicycles",
+    "app/bicycles"
+  ]
+}
