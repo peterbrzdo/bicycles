@@ -95,7 +95,7 @@
                 },
                 {
                     "name": "Orders_ItemOrder_items",
-                    "pattern": "Orders_Item({Orders_ItemKey}):?query:",
+                    "pattern": "Orders_Header({key}):?query:",
                     "target": [
                         "Orders_HeaderMain",
                         "Orders_ItemOrder_items"
@@ -112,7 +112,7 @@
                             "viewName": "bicycles.ext.main.Main",
                             "contextPath": "/Orders_Header",
                             "navigation": {
-                                "Orders_Item": {
+                                "Orders_Header": {
                                     "detail": {
                                         "route": "Orders_ItemOrder_items"
                                     }
@@ -131,10 +131,10 @@
                     "options": {
                         "settings": {
                             "viewName": "bicycles.ext.view.Order_items",
-                            "contextPath": "/Orders_Item"
+                            "contextPath": "/Orders_Header"
                         }
                     },
-                    "contextPattern": "/Orders_Item({Orders_ItemKey})"
+                    "contextPattern": "/Orders_Header({key})"
                 }
             },
             "config": {

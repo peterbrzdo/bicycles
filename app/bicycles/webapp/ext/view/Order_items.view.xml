@@ -2,7 +2,7 @@
     <Page id="Order_items" title="Order_items">
         <content>
             <macros:Table id="item_table" 
-                          metaPath="@com.sap.vocabularies.UI.v1.LineItem" 
+                          metaPath="items/@com.sap.vocabularies.UI.v1.LineItem" 
                           headerVisible="true" 
                           isSearchable="true" 
                           selectionMode="Single" 
