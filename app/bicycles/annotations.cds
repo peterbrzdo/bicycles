@@ -31,7 +31,7 @@ annotate service.Orders_Header with @(
         {
             $Type : 'UI.DataField',
             Value : grossamount,
-            Label : 'Order amount',
+            Label : 'Gross amount',
         },
        
     ]
@@ -61,7 +61,7 @@ annotate service.Orders_Item with @(
         {
             $Type : 'UI.DataField',
             Value : grossamount,
-            Label : 'Amount',
+            Label : 'Price',
         },
     ]
 );

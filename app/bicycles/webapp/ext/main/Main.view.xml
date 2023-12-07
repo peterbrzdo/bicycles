@@ -1,24 +1,24 @@
-<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:macros="sap.fe.macros" xmlns:html="http://www.w3.org/1999/xhtml" controllerName="bicycles.ext.main.Main">
+<mvc:View xmlns:core="sap.ui.core"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    xmlns:vbm="sap.ui.vbm"
+    xmlns:macros="sap.fe.macros"
+    xmlns:html="http://www.w3.org/1999/xhtml" controllerName="bicycles.ext.main.Main">
     <Page id="Main" title="Main">
         <content>
-            <macros:FilterBar liveMode="true" 
-                              metaPath="@com.sap.vocabularies.UI.v1.SelectionFields" 
-                              id="FilterBar1" search=".handlers.onFiltersChanged" 
-                              filterChanged=".handlers.onFiltersChanged"/>
+        <vbm:AnalyticMap id="analyticmap1" 
+                       centerPosition="19.15294;48.73285;0" 
+                       initialZoom="7"    
+                       xmlns:l="sap.ui.layout">      
 
-            <macros:Table id="header_table" 
-                          filterBar="FilterBar1" 
-                          metaPath="@com.sap.vocabularies.UI.v1.LineItem" 
-                          enableAutoColumnWidth="true" 
-                          enableExport="true" 
-                          header="Bicycles Orders" 
-                          headerVisible="true" 
-                          isSearchable="true" 
-                          readOnly="true" 
-                          selectionMode="Single" 
-                          type="ResponsiveTable" 
-                          variantManagement="None"                           
-                          />
+                        <vbm:Areas id = "Areas" items="{maps_data>/Areas}">
+            <vbm:Area id="Area" position="{H}"/>
+            </vbm:Areas>         
+      </vbm:AnalyticMap>
+      
+            <macros:FilterBar liveMode="true" metaPath="@com.sap.vocabularies.UI.v1.SelectionFields" id="FilterBar1" search=".handlers.onFiltersChanged" filterChanged=".handlers.onFiltersChanged"/>
+
+            <macros:Table id="header_table" filterBar="FilterBar1" metaPath="@com.sap.vocabularies.UI.v1.LineItem" enableAutoColumnWidth="true" enableExport="true" header="Bicycles Orders" headerVisible="true" isSearchable="true" readOnly="true" selectionMode="Single" type="ResponsiveTable" variantManagement="None" />
         </content>
     </Page>
 </mvc:View>

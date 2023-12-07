@@ -24,7 +24,11 @@
                     "localUri": "localService/metadata.xml",
                     "odataVersion": "4.0"
                 }
-            }
+            },
+            "maps": {
+				"uri": "ext/model/mapdata.json",
+				"type": "JSON"
+			}
         }
     },
     "sap.ui": {
@@ -79,7 +83,13 @@
             "@i18n": {
                 "type": "sap.ui.model.resource.ResourceModel",
                 "uri": "i18n/i18n.properties"
-            }
+            },
+            "maps_data": {
+				"type": "sap.ui.model.json.JSONModel",
+                "preload": true,
+				"dataSource": "maps"             
+               
+			}
         },
         "resources": {
             "css": []

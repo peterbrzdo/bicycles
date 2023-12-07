@@ -1,6 +1,7 @@
 import { event } from "@sap/cds";
 import Controller from "sap/fe/core/PageController";
-
+import MessageToast from "sap/m/MessageToast";
+import JSONModel from "sap/ui/model/json/JSONModel";
 
 /**
  * @namespace bicycles.ext.main.Main.controller
@@ -12,9 +13,11 @@ export default class Main extends Controller {
      * Can be used to modify the View before it is displayed, to bind event handlers and do other one-time initialization.
      * @memberOf bicycles.ext.main.Main
      */
-    // public onInit(): void {
-    //
-    //}
+   // public onInit(): void {
+      
+     //  var dataModel = this.getOwnerComponent()?.getModel("maps_data");
+     //   console.log(dataModel);
+  //  }
 
     /**
      * Similar to onAfterRendering, but this hook is invoked before the controller's View is re-rendered
@@ -30,9 +33,11 @@ export default class Main extends Controller {
      * This hook is the same one that SAPUI5 controls get after being rendered.
      * @memberOf bicycles.ext.main.Main
      */
-    // public  onAfterRendering(): void {
-    //
-    //  }
+   // public  onAfterRendering(): void {
+    
+
+       
+  //}
 
     /**
      * Called when the Controller is destroyed. Use this one to free resources and finalize activities.
@@ -41,9 +46,9 @@ export default class Main extends Controller {
     // public onExit(): void {
     //
     //  }
-    public onrowpress(e:event):void
-    {      
+   // public onrowpress(e:event):void
+  //  {      
        
         
-    }
+  //  }
 }
