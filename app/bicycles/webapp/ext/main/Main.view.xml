@@ -12,7 +12,7 @@
                        xmlns:l="sap.ui.layout">      
 
                         <vbm:Areas id = "Areas" items="{maps_data>/Areas}">
-            <vbm:Area id="Area" position="{H}"/>
+            <vbm:Area id="Area" position="{maps_data>H}"/>
             </vbm:Areas>         
       </vbm:AnalyticMap>
       
