@@ -1,32 +1,32 @@
 ## Application Details
 |               |
 | ------------- |
-|**Generation Date and Time**<br>Tue Oct 24 2023 16:45:39 GMT+0200 (Central European Summer Time)|
+|**Generation Date and Time**<br>Sat Dec 09 2023 16:13:50 GMT+0100 (Central European Standard Time)|
 |**App Generator**<br>@sap/generator-fiori-elements|
-|**App Generator Version**<br>1.11.1|
+|**App Generator Version**<br>1.11.5|
 |**Generation Platform**<br>Visual Studio Code|
 |**Template Used**<br>Custom Page V4|
 |**Service Type**<br>Local Cap|
-|**Service URL**<br>http://localhost:4004/odata/v4/orders-/
-|**Module Name**<br>bicycles|
-|**Application Title**<br>Bicycles Company |
+|**Service URL**<br>http://localhost:4004/odata/v4/crime-data/
+|**Module Name**<br>kriminalita|
+|**Application Title**<br>Štatistika kriminality|
 |**Namespace**<br>|
-|**UI5 Theme**<br>sap_belize|
-|**UI5 Version**<br>1.119.2|
-|**Enable Code Assist Libraries**<br>True|
+|**UI5 Theme**<br>sap_horizon|
+|**UI5 Version**<br>1.120.1|
+|**Enable Code Assist Libraries**<br>False|
 |**Enable TypeScript**<br>True|
 |**Add Eslint configuration**<br>False|
-|**Main Entity**<br>Orders_Header|
+|**Main Entity**<br>Statistika|
 
-## bicycles
+## kriminalita
 
-Bicycles company 
+Štatistika kriminality
 
 ### Starting the generated app
 
 -   This app has been generated using the SAP Fiori tools - App Generator, as part of the SAP Fiori tools suite.  In order to launch the generated app, simply start your CAP project and navigate to the following location in your browser:
 
-http://localhost:4004/bicycles/index.html
+http://localhost:4004/kriminalita/index.html
 
 #### Pre-requisites:
 

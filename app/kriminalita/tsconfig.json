@@ -11,12 +11,13 @@
         "outDir": "./dist",
         "baseUrl": "./",
         "paths": {
-            "bicycles/*": [
+            "kriminalita/*": [
                 "./webapp/*"
             ]
         },
-        "types": [
-            "@sapui5/types"
+        "typeRoots": [
+            "./node_modules/@types",
+            "./node_modules/@sapui5/types"
         ]
     },
     "include": [

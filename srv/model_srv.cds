@@ -1,13 +1,9 @@
-using bicycles from '../db/model';
+using kriminalita from '../db/model';
 
-service Orders_Service {
-
-    entity Orders_Header as projection on bicycles.Order_header;
-    entity Orders_Item   as projection on bicycles.Order_item;
-    entity Adress        as projection on bicycles.Address;
-    entity Partner       as projection on bicycles.Partner;
-    entity Products      as projection on bicycles.Products;
-
+service crime_data {
+    entity Statistika as projection on kriminalita.Statistika; 
+    entity Tsk as projection on kriminalita.Tsk;
+    entity Kraj as projection on kriminalita.Kraj;
 }
 
 

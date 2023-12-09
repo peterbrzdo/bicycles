@@ -1,0 +1,123 @@
+{
+    "_version": "1.59.0",
+    "sap.app": {
+        "id": "kriminalita",
+        "type": "application",
+        "i18n": "i18n/i18n.properties",
+        "applicationVersion": {
+            "version": "0.0.1"
+        },
+        "title": "{{appTitle}}",
+        "description": "{{appDescription}}",
+        "resources": "resources.json",
+        "sourceTemplate": {
+            "id": "@sap/generator-fiori:fpm",
+            "version": "1.11.5",
+            "toolsId": "49a089c1-b506-41a0-8366-3e33765b97cf"
+        },
+        "dataSources": {
+            "mainService": {
+                "uri": "/odata/v4/crime-data/",
+                "type": "OData",
+                "settings": {
+                    "annotations": [],
+                    "localUri": "localService/metadata.xml",
+                    "odataVersion": "4.0"
+                }
+            },
+            "maps": {
+                "uri": "ext/model/mapdata.json",
+                "type": "JSON"
+            }
+        }
+    },
+    "sap.ui": {
+        "technology": "UI5",
+        "icons": {
+            "icon": "",
+            "favIcon": "",
+            "phone": "",
+            "phone@2": "",
+            "tablet": "",
+            "tablet@2": ""
+        },
+        "deviceTypes": {
+            "desktop": true,
+            "tablet": true,
+            "phone": true
+        }
+    },
+    "sap.ui5": {
+        "flexEnabled": true,
+        "dependencies": {
+            "minUI5Version": "1.120.1",
+            "libs": {
+                "sap.m": {},
+                "sap.ui.core": {},
+                "sap.ushell": {},
+                "sap.fe.templates": {}
+            }
+        },
+        "contentDensities": {
+            "compact": true,
+            "cozy": true
+        },
+        "models": {
+            "i18n": {
+                "type": "sap.ui.model.resource.ResourceModel",
+                "settings": {
+                    "bundleName": "kriminalita.i18n.i18n"
+                }
+            },
+            "": {
+                "dataSource": "mainService",
+                "preload": true,
+                "settings": {
+                    "synchronizationMode": "None",
+                    "operationMode": "Server",
+                    "autoExpandSelect": true,
+                    "earlyRequests": true
+                }
+            },
+            "@i18n": {
+                "type": "sap.ui.model.resource.ResourceModel",
+                "uri": "i18n/i18n.properties"
+            },
+            "maps_data": {
+                "type": "sap.ui.model.json.JSONModel",
+                "preload": true,
+                "dataSource": "maps"
+            }
+        },
+        "resources": {
+            "css": []
+        },
+        "routing": {
+            "routes": [
+                {
+                    "name": "StatistikaMain",
+                    "pattern": ":?query:",
+                    "target": "StatistikaMain"
+                }
+            ],
+            "targets": {
+                "StatistikaMain": {
+                    "type": "Component",
+                    "id": "StatistikaMain",
+                    "name": "sap.fe.core.fpm",
+                    "options": {
+                        "settings": {
+                            "viewName": "kriminalita.ext.main.Main",
+                            "contextPath": "/Statistika"
+                        }
+                    }
+                }
+            }
+        },
+        "extends": {
+            "extensions": {
+                "sap.ui.controllerExtensions": {}
+            }
+        }
+    }
+}

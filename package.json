@@ -13,10 +13,10 @@
     "passport": "^0"
   },
   "scripts": {
-    "start": "cds watch --profile hybrid --open bicycles/index.html?sap-ui-xx-viewCache=false --livereload true",
-    "watch-bicycles_fiori": "cds watch --open bicyclesfiori/index.html?sap-ui-xx-viewCache=false --livereload false",
-    "watch-bicycles": "cds watch --open bicycles/index.html?sap-ui-xx-viewCache=false --livereload false"
-    
+    "start": "cds watch --profile hybrid --open kriminalita/index.html?sap-ui-xx-viewCache=false --livereload true",
+    "watch-bicycles_fiori": "cds watch --open kriminalitafiori/index.html?sap-ui-xx-viewCache=false --livereload false",
+    "watch-bicycles": "cds watch --open kriminalita/index.html?sap-ui-xx-viewCache=false --livereload false",
+    "watch-kriminalita": "cds watch --open kriminalita/index.html?sap-ui-xx-viewCache=false --livereload false"
   },
   "cds": {
     "build": {
@@ -47,6 +47,7 @@
   "sapux": [
     "app/bicycles_fiori",
     "app/bicycles",
-    "app/bicycles"
+    "app/bicycles",
+    "app/kriminalita"
   ]
 }

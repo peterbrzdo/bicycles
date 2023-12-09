@@ -1,7 +1,7 @@
 import BaseComponent from "sap/fe/core/AppComponent";
 
 /**
- * @namespace bicycles
+ * @namespace kriminalita
  */
 export default class Component extends BaseComponent {
 

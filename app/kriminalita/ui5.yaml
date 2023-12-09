@@ -1,6 +1,6 @@
 specVersion: "3.1"
 metadata:
-  name: bicycles
+  name: kriminalita
 type: application
 server:
   customMiddleware:
