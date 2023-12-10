@@ -3,17 +3,28 @@
         <content>
             <macros:FilterBar id="FilterBar" metaPath="@com.sap.vocabularies.UI.v1.SelectionFields" liveMode="true"/>
             <HBox id="HBox1">
-                <macros:Table id="Table" metaPath="@com.sap.vocabularies.UI.v1.LineItem" enableExport="true" filterBar="FilterBar" header="Štatistika kriminality" headerVisible="true" isSearchable="true" selectionMode="Single" type="ResponsiveTable" variantManagement="None" enableAutoColumnWidth="true"/>
-                <vbm:AnalyticMap id="analyticmap1" centerPosition="19.15294;48.73285;0" initialZoom="8" xmlns:l="sap.ui.layout">
-                    <vbm:Areas id="Areas" items="{maps_data>/Areas}">
-                        <vbm:Area id="Area" position="{maps_data>B}" colorBorder="{maps_data>D}" color="{maps_data>C}" click="onAreaClick"/>
-                    </vbm:Areas>
-                    <vbm:legend>
-                        <vbm:Legend id="legend" caption="Legend" items="{maps_data>/Areas}">
-                            <vbm:LegendItem id="LegendItem" text="{maps_data>A}" color="{maps_data>C}"/>
-                        </vbm:Legend>
-                    </vbm:legend>
-                </vbm:AnalyticMap>
+                <macros:Table id="Table" metaPath="@com.sap.vocabularies.UI.v1.LineItem" enableExport="true" filterBar="FilterBar" header="Štatistika kriminality" headerVisible="true" isSearchable="true" selectionMode="Single" type="ResponsiveTable" variantManagement="None" enableAutoColumnWidth="false"/>
+                <VBox id="VBox1">
+                    <Label id="Label1" text="Počet zistených trestných činov v roku 2022 v rámci jednotlivých krajov SR. "/>
+
+                    <vbm:AnalyticMap id="analyticmap1" width="800px" height="600px" enableAnimation="true" centerPosition="20.55;48.73285;0" initialZoom="7" xmlns:l="sap.ui.layout">
+                        <vbm:Areas id="Areas" items="{maps_data>/Areas}">
+                            <vbm:Area id="Area" position="{maps_data>B}" colorBorder="{maps_data>D}" color="{maps_data>C}" click="onAreaClick"/>
+                        </vbm:Areas>
+                        <vbm:Spots id = "Spots1" items="{maps_data>/Areas}">
+                            <vbm:Spot id = "Spot1" position="{maps_data>F}" tooltip="{maps_data>E}" type="Default" text="{maps_data>E}"/>
+                        </vbm:Spots>
+                        <vbm:legend>
+                            <vbm:Legend id="legend" caption="Legend" items="{maps_data>/Areas}">
+                                <vbm:LegendItem id="LegendItem" text="{maps_data>A}" color="{maps_data>C}"/>
+                            </vbm:Legend>
+                        </vbm:legend>
+                    </vbm:AnalyticMap>
+
+                   
+
+                    
+                </VBox>
             </HBox>
         </content>
     </Page>

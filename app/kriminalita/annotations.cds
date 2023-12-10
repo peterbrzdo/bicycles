@@ -29,6 +29,10 @@ annotate service.Statistika with @(UI.LineItem: [
 ]);
 
 annotate service.Statistika with {
+    zistene @Aggregation.default: #SUM
+}
+
+annotate service.Statistika with {
     skoda @Measures.ISOCurrency: currency
 };
 
@@ -76,6 +80,28 @@ annotate service.Kraj with {
         ![@UI.TextArrangement] : #TextOnly,
     }
 };
+
+annotate service.Kraj with @(UI.LineItem: [
+ 
+    {
+        $Type: 'UI.DataField',
+        Value: kraj,
+        Label: 'Kraj',
+    },
+    {
+        $Type            : 'UI.DataField',
+        Value            : zistene,
+        Label            : 'Zistené TČ',
+        ![@UI.Importance]: #Medium,
+    },
+    {
+        $Type: 'UI.DataField',
+        Value: skoda,
+        Label: 'Výška škody',
+    },
+
+]);
+
 annotate service.Statistika with {
     tsk @(Common.ValueList : {
             $Type : 'Common.ValueListType',
